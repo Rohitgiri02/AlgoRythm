@@ -1,0 +1,33 @@
+# Node modules
+node_modules
+npm-debug.log
+
+# Build output
+dist
+build
+target
+
+# IDE
+.vscode
+.idea
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+logs
+
+# Testing
+coverage
+.nyc_output

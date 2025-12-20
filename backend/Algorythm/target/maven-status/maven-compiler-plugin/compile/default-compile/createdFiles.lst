@@ -1,0 +1,11 @@
+com\algorythm\test\TestConnection.class
+com\algorythm\dao\BaseDAO.class
+com\algorythm\model\Song.class
+com\algorythm\model\User.class
+com\algorythm\config\DatabaseConfig.class
+com\algorythm\dao\SongDAO.class
+com\algorythm\dao\UserDAO.class
+com\algorythm\filter\CorsFilter.class
+com\algorythm\servlet\UserServlet.class
+com\algorythm\service\UserService.class
+com\algorythm\servlet\SongServlet.class

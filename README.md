@@ -1,13 +1,16 @@
-# 🎵 AlgoRythm - AI-Powered Music Streaming Platform
+# 🎵 AlgoRythm - Music Streaming Platform
 
 <div align="center">
 
-![AlgoRythm Logo](https://img.shields.io/badge/AlgoRythm-AI%20Music%20Platform-blueviolet?style=for-the-badge)
+![AlgoRythm Logo](https://img.shields.io/badge/AlgoRythm-Music%20Platform-blueviolet?style=for-the-badge)
 [![Made with React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
 [![Java Servlet](https://img.shields.io/badge/Servlet-Backend-orange?style=flat-square&logo=java)](https://docs.oracle.com/javaee/7/api/javax/servlet/package-summary.html)
-[![JDBC](https://img.shields.io/badge/JDBC-Database-blue?style=flat-square&logo=postgresql)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.4-blue?style=flat-square&logo=mysql)](https://www.mysql.com/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker)](https://www.docker.com/)
 
-**An intelligent music streaming platform powered by advanced AI algorithms**
+**A full-stack music streaming platform with modern architecture**
+
+[Quick Start](#-quick-start-with-docker) • [Manual Setup](#-manual-setup) • [Features](#-features) • [API Docs](#-api-endpoints)
 
 </div>
 
@@ -15,285 +18,236 @@
 
 ## 📋 Table of Contents
 
-- [About the Project](#about-the-project)
-- [Team](#team)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-  - [Frontend Setup](#frontend-setup)
-  - [Backend Setup](#backend-setup)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [About](#-about-the-project)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Quick Start (Docker)](#-quick-start-with-docker)
+- [Manual Setup](#-manual-setup)
+- [Usage Guide](#-usage-guide)
+- [API Endpoints](#-api-endpoints)
+- [Project Structure](#-project-structure)
+- [Troubleshooting](#-troubleshooting)
 
 ---
 
 ## 🎯 About the Project
 
-**AlgoRythm** is an innovative AI-powered music streaming platform that revolutionizes how users discover and enjoy music. Using advanced artificial intelligence algorithms, AlgoRythm creates personalized playlists, recommends tracks based on listening habits, and provides an immersive music experience with a sleek, responsive user interface.
-
-### Core Concept
-
-The platform leverages AI to:
-- **Analyze user preferences** and listening patterns
-- **Generate personalized playlists** tailored to individual tastes
-- **Recommend new music** based on mood, genre, and listening history
-- **Create smart radio stations** that adapt to user feedback
-- **Provide seamless streaming** with an intuitive, modern interface
-
----
-
-## 👥 Team
-
-<div align="center">
-
-### **Team Zcoder**
-
-| Role | Name |
-|------|------|
-| **Team Leader** | Rohit Giri |
-| **Team Member** | Palak Kumari |
-| **Team Member** | Ujjwal Kumar |
-
-</div>
+**AlgoRythm** is a modern music streaming platform built with React and Java Servlets. Stream music, create playlists, and track your listening activity with a beautiful, responsive interface.
 
 ---
 
 ## ✨ Features
 
-- 🤖 **AI-Powered Recommendations** - Smart music suggestions based on your taste
-- 🎼 **Personalized Playlists** - Auto-generated playlists that match your mood
-- 🔍 **Advanced Search** - Find songs, artists, and albums instantly
-- 📱 **Responsive Design** - Seamless experience across all devices
-- 🎵 **Music Player** - Full-featured player with queue management
-- 📊 **Listening History** - Track your recently played songs
-- 🎨 **Modern UI/UX** - Beautiful glassmorphism design with smooth animations
-- 🔊 **Volume Control** - Precise audio level management
-- ⏯️ **Playback Controls** - Play, pause, skip, shuffle, and repeat
+- 🔐 **User Authentication** - Secure registration and login
+- 🎵 **Music Library** - Browse 20+ sample songs
+- 🔍 **Search** - Find songs by title, artist, or album
+- 📱 **Responsive** - Works on all devices
+- 🎼 **Playlists** - Create and manage custom playlists
+- ❤️ **Favorites** - Like and save tracks
+- 📊 **History** - Track listening activity
+- 👤 **Profiles** - Personalized user accounts
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **React 19.2.0** - Modern UI library for building interactive interfaces
-- **Vite 7.2.4** - Next-generation frontend build tool
-- **CSS3** - Advanced styling with glassmorphism and gradients
-- **ESLint** - Code quality and consistency
-
-### Backend
-- **Java Servlets** - Server-side request handling and business logic
-- **JDBC (Java Database Connectivity)** - Database integration and data persistence
-- **Apache Tomcat** - Servlet container for deployment
-- **JSP (JavaServer Pages)** - Dynamic web page generation
-
-### Database
-- **MySQL/PostgreSQL** - Relational database for storing user data, songs, and playlists
+**Frontend:** React 19, Vite, React Router, Axios  
+**Backend:** Java 11, Servlets, HikariCP, Gson  
+**Database:** MySQL 8.4  
+**Deployment:** Docker, Tomcat 9, Nginx  
 
 ---
 
-## 📦 Prerequisites
+## 🚀 Quick Start with Docker
 
-Before setting up the project, ensure you have the following installed:
+**The fastest and safest way to run AlgoRythm:**
 
-### For Frontend:
-- **Node.js** (v18.0.0 or higher) - [Download](https://nodejs.org/)
-- **npm** (v9.0.0 or higher) or **yarn**
+### Prerequisites
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed
 
-### For Backend:
-- **Java Development Kit (JDK)** (v11 or higher) - [Download](https://www.oracle.com/java/technologies/downloads/)
-- **Apache Maven** (v3.6 or higher) - [Download](https://maven.apache.org/download.cgi)
-- **Apache Tomcat** (v9.0 or higher) - [Download](https://tomcat.apache.org/download-90.cgi)
-- **MySQL** or **PostgreSQL** database
+### Steps
 
----
-
-## 🚀 Installation & Setup
-
-### Frontend Setup
-
-1. **Navigate to the frontend directory:**
-   ```bash
-   cd frontend
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-   or if you use yarn:
-   ```bash
-   yarn install
-   ```
-
-3. **Configure environment variables:**
-   
-   Create a `.env` file in the `frontend` directory:
-   ```env
-   VITE_API_URL=http://localhost:8080/Algorythm
-   VITE_APP_NAME=AlgoRythm
-   ```
-
-4. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-   or
-   ```bash
-   yarn dev
-   ```
-
-5. **Access the application:**
-   
-   Open your browser and navigate to: `http://localhost:5173`
-
-### Frontend Build for Production:
 ```bash
+# 1. Clone repository
+git clone <repository-url>
+cd AlgoRythm
+
+# 2. Start all services
+docker-compose up -d
+
+# 3. Wait 60 seconds for initialization
+
+# 4. Access application
+```
+
+- **Frontend:** http://localhost:3000
+- **Backend:** http://localhost:8080/Algorythm  
+- **Test Login:** john@example.com / password
+
+```bash
+# Stop services
+docker-compose down
+
+# Stop and remove data
+docker-compose down -v
+```
+
+---
+
+## 🔧 Manual Setup
+
+### Prerequisites
+
+- Java JDK 11+ 
+- Maven 3.9+
+- Tomcat 9.0+
+- MySQL 8.4+
+- Node.js 18+
+
+### 1. Database Setup
+
+```bash
+# Install MySQL (Windows)
+winget install Oracle.MySQL
+
+# Start MySQL
+net start MySQL84
+
+# Create database
+mysql -u root -p
+```
+
+```sql
+CREATE DATABASE algorythm_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'algorythm_user'@'localhost' IDENTIFIED BY 'algorythm_password';
+GRANT ALL PRIVILEGES ON algorythm_db.* TO 'algorythm_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+```
+
+```bash
+# Load schema
+mysql -u algorythm_user -palgorythm_password algorythm_db < backend/Algorythm/src/main/resources/schema_mysql.sql
+
+# Load sample data
+mysql -u algorythm_user -palgorythm_password algorythm_db < backend/Algorythm/src/main/resources/sample_data.sql
+```
+
+### 2. Backend Setup
+
+```bash
+cd backend/Algorythm
+
+# Build
+mvn clean package
+
+# Deploy to Tomcat
+cp target/Algorythm.war /path/to/tomcat/webapps/
+
+# Set JAVA_HOME (Windows)
+set JAVA_HOME=C:\Program Files\Java\jdk-11
+
+# Start Tomcat
+cd /path/to/tomcat/bin
+startup.bat
+```
+
+### 3. Frontend Setup
+
+```bash
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
 npm run build
 ```
-The build files will be generated in the `dist` folder.
+
+**Access:** http://localhost:3000
 
 ---
 
-### Backend Setup
+## 📖 Usage Guide
 
-1. **Navigate to the backend directory:**
-   ```bash
-   cd backend/Algorythm
-   ```
+### Register & Login
 
-2. **Configure Database:**
+1. Open http://localhost:3000
+2. Click **Register** → Fill form → Create Account
+3. Or use test account: john@example.com / password
 
-   Create a database for the project:
-   ```sql
-   CREATE DATABASE algorythm_db;
-   USE algorythm_db;
-   ```
+### Browse Music
 
-   Update the JDBC connection properties in your servlet configuration or create a `db.properties` file:
-   ```properties
-   db.url=jdbc:mysql://localhost:3306/algorythm_db
-   db.username=your_username
-   db.password=your_password
-   db.driver=com.mysql.cj.jdbc.Driver
-   ```
+- View all songs on dashboard
+- Search by title in search bar
+- Click song card to play
+- Click ❤️ to like
 
-3. **Create Database Tables:**
+### Create Playlists
 
-   Run the SQL schema (create these tables in your database):
-   ```sql
-   -- Users Table
-   CREATE TABLE users (
-       user_id INT PRIMARY KEY AUTO_INCREMENT,
-       username VARCHAR(50) UNIQUE NOT NULL,
-       email VARCHAR(100) UNIQUE NOT NULL,
-       password VARCHAR(255) NOT NULL,
-       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
+1. Click **"Create Playlist"**
+2. Enter name and description
+3. Add songs with **+** icon
 
-   -- Songs Table
-   CREATE TABLE songs (
-       song_id INT PRIMARY KEY AUTO_INCREMENT,
-       title VARCHAR(200) NOT NULL,
-       artist VARCHAR(100) NOT NULL,
-       album VARCHAR(100),
-       duration INT,
-       file_path VARCHAR(500),
-       cover_image VARCHAR(500),
-       genre VARCHAR(50),
-       release_date DATE,
-       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
+### Profile
 
-   -- Playlists Table
-   CREATE TABLE playlists (
-       playlist_id INT PRIMARY KEY AUTO_INCREMENT,
-       user_id INT,
-       name VARCHAR(100) NOT NULL,
-       description TEXT,
-       is_ai_generated BOOLEAN DEFAULT FALSE,
-       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-       FOREIGN KEY (user_id) REFERENCES users(user_id)
-   );
+- View listening stats
+- See favorite songs
+- Manage playlists
+- Update settings
 
-   -- Playlist Songs Table
-   CREATE TABLE playlist_songs (
-       id INT PRIMARY KEY AUTO_INCREMENT,
-       playlist_id INT,
-       song_id INT,
-       position INT,
-       added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-       FOREIGN KEY (playlist_id) REFERENCES playlists(playlist_id),
-       FOREIGN KEY (song_id) REFERENCES songs(song_id)
-   );
+---
 
-   -- Listening History Table
-   CREATE TABLE listening_history (
-       id INT PRIMARY KEY AUTO_INCREMENT,
-       user_id INT,
-       song_id INT,
-       played_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-       FOREIGN KEY (user_id) REFERENCES users(user_id),
-       FOREIGN KEY (song_id) REFERENCES songs(song_id)
-   );
-   ```
+## 🔗 API Endpoints
 
-4. **Update `pom.xml` dependencies:**
+### Authentication
 
-   Ensure your `pom.xml` includes the necessary dependencies:
-   ```xml
-   <dependencies>
-       <!-- Servlet API -->
-       <dependency>
-           <groupId>javax.servlet</groupId>
-           <artifactId>javax.servlet-api</artifactId>
-           <version>4.0.1</version>
-           <scope>provided</scope>
-       </dependency>
+```http
+POST /Algorythm/users/register
+{
+  "username": "string",
+  "email": "string",
+  "password": "string",
+  "fullName": "string"
+}
 
-       <!-- JDBC MySQL Driver -->
-       <dependency>
-           <groupId>mysql</groupId>
-           <artifactId>mysql-connector-java</artifactId>
-           <version>8.0.33</version>
-       </dependency>
+POST /Algorythm/users/login
+{
+  "email": "string",
+  "password": "string"
+}
 
-       <!-- JSON Processing -->
-       <dependency>
-           <groupId>com.google.code.gson</groupId>
-           <artifactId>gson</artifactId>
-           <version>2.10.1</version>
-       </dependency>
-   </dependencies>
-   ```
+POST /Algorythm/users/logout
+```
 
-5. **Build the project using Maven:**
-   ```bash
-   mvn clean install
-   ```
+### Songs
 
-6. **Deploy to Tomcat:**
+```http
+GET /Algorythm/songs
+GET /Algorythm/songs/{id}
+GET /Algorythm/songs/search?q=searchTerm
+GET /Algorythm/songs/artist/{artistId}
+GET /Algorythm/songs/album/{albumId}
+```
 
-   **Option A - Manual Deployment:**
-   - Copy the generated WAR file from `target/Algorythm.war` to Tomcat's `webapps` directory
-   - Start Tomcat server:
-     ```bash
-     # Windows
-     TOMCAT_HOME\bin\startup.bat
-     
-     # Linux/Mac
-     TOMCAT_HOME/bin/startup.sh
-     ```
+### Activity
 
-   **Option B - IDE Deployment:**
-   - If using Eclipse/IntelliJ IDEA, configure Tomcat server in your IDE
-   - Right-click project → Run on Server → Select Tomcat
+```http
+POST /Algorythm/activity/like
+{
+  "songId": number
+}
 
-7. **Verify Backend is Running:**
-   
-   Access: `http://localhost:8080/Algorythm`
+POST /Algorythm/activity/history
+{
+  "songId": number,
+  "durationPlayed": number,
+  "completionPercentage": number
+}
+```
 
 ---
 
@@ -301,100 +255,95 @@ The build files will be generated in the `dist` folder.
 
 ```
 AlgoRythm/
-│
-├── frontend/                    # React Frontend Application
-│   ├── public/                 # Static assets
+├── backend/Algorythm/
+│   ├── src/main/java/com/algorythm/
+│   │   ├── config/DatabaseConfig.java
+│   │   ├── dao/*.java
+│   │   ├── filter/CorsFilter.java
+│   │   ├── model/*.java
+│   │   ├── service/*.java
+│   │   └── servlet/*.java
+│   ├── src/main/resources/
+│   │   ├── db.properties
+│   │   ├── schema_mysql.sql
+│   │   └── sample_data.sql
+│   └── pom.xml
+├── frontend/
 │   ├── src/
-│   │   ├── assets/            # Images, icons, etc.
-│   │   ├── App.jsx            # Main application component
-│   │   ├── App.css            # Application styles
-│   │   ├── main.jsx           # Entry point
-│   │   └── index.css          # Global styles
-│   ├── package.json           # Frontend dependencies
-│   ├── vite.config.js         # Vite configuration
-│   └── README.md              # Frontend documentation
-│
-├── backend/                    # Java Backend Application
-│   └── Algorythm/
-│       ├── src/
-│       │   └── main/
-│       │       ├── java/      # Java Servlets & Business Logic
-│       │       └── webapp/
-│       │           ├── WEB-INF/
-│       │           │   └── web.xml    # Servlet configuration
-│       │           └── index.jsp
-│       └── pom.xml            # Maven configuration
-│
-└── README.md                   # This file
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── services/
+│   │   └── App.jsx
+│   ├── package.json
+│   └── vite.config.js
+├── docker-compose.yml
+└── README.md
 ```
 
 ---
 
-## 💻 Usage
+## 🐛 Troubleshooting
 
-### Running the Complete Application
+### Port in Use
+```bash
+# Windows
+netstat -ano | findstr :3000
+taskkill /PID <PID> /F
 
-1. **Start the Backend Server:**
-   - Ensure Tomcat is running with the deployed backend
-   - Backend will be available at: `http://localhost:8080/Algorythm`
+# Linux/Mac
+lsof -i :3000
+kill -9 <PID>
+```
 
-2. **Start the Frontend Development Server:**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-   - Frontend will be available at: `http://localhost:5173`
+### MySQL Won't Connect
+```bash
+# Check service
+net start MySQL84  # Windows
+sudo systemctl status mysql  # Linux
 
-3. **Access the Application:**
-   - Open your browser and go to `http://localhost:5173`
-   - The frontend will communicate with the backend API automatically
+# Test connection
+mysql -u algorythm_user -palgorythm_password algorythm_db
+```
 
-### Key Endpoints (Backend API)
+### Tomcat Issues
+```bash
+# Check JAVA_HOME
+echo %JAVA_HOME%  # Windows
+echo $JAVA_HOME   # Linux
 
-- `POST /api/auth/login` - User login
-- `POST /api/auth/register` - User registration
-- `GET /api/songs` - Get all songs
-- `GET /api/songs/{id}` - Get specific song
-- `GET /api/playlists` - Get user playlists
-- `POST /api/playlists` - Create new playlist
-- `GET /api/recommendations` - Get AI-powered recommendations
-- `GET /api/history` - Get listening history
+# View logs
+cat /path/to/tomcat/logs/catalina.out
+```
+
+### Docker Problems
+```bash
+# View logs
+docker-compose logs
+
+# Rebuild
+docker-compose down -v
+docker-compose up --build -d
+```
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Here's how you can help:
-
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Create feature branch (`git checkout -b feature/Amazing`)
+3. Commit changes (`git commit -m 'Add feature'`)
+4. Push to branch (`git push origin feature/Amazing`)
+5. Open Pull Request
 
 ---
 
-## 📄 License
+## 👥 Team Zcoder
 
-This project is developed by **Team Zcoder** for educational purposes.
-
----
-
-## 📞 Contact
-
-**Team Zcoder**
-
-- **Team Leader:** Rohit Giri
-- **Email:** [contact@algorythm.com](mailto:contact@algorythm.com)
-- **Project Link:** [https://github.com/teamzcoder/algorythm](https://github.com/teamzcoder/algorythm)
-
----
-
-## 🙏 Acknowledgments
-
-- React Team for the amazing framework
-- Apache Software Foundation for Tomcat and Maven
-- All open-source contributors who made this project possible
+| Role | Name |
+|------|------|
+| **Team Leader** | Rohit Giri |
+| **Member** | Palak Kumari |
+| **Member** | Ujjwal Kumar |
 
 ---
 
@@ -402,6 +351,8 @@ This project is developed by **Team Zcoder** for educational purposes.
 
 **Made with ❤️ by Team Zcoder**
 
-⭐ Star this repository if you find it helpful!
+⭐ Star us on GitHub!
+
+[Report Bug](https://github.com/yourusername/AlgoRythm/issues) • [Request Feature](https://github.com/yourusername/AlgoRythm/issues)
 
 </div>

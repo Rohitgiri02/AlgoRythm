@@ -112,6 +112,37 @@ public class SongDAO extends BaseDAO {
     }
 
     /**
+     * Get all songs
+     */
+    public List<Song> findAll() throws SQLException {
+        String sql = "SELECT * FROM songs ORDER BY created_at DESC LIMIT 100";
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        List<Song> songs = new ArrayList<>();
+        
+        try {
+            conn = getConnection();
+            stmt = conn.prepareStatement(sql);
+            rs = stmt.executeQuery();
+            
+            while (rs.next()) {
+                songs.add(mapResultSetToSong(rs));
+            }
+            return songs;
+        } finally {
+            closeResources(conn, stmt, rs);
+        }
+    }
+
+    /**
+     * Search songs by title
+     */
+    public List<Song> searchByTitle(String searchQuery) throws SQLException {
+        return searchByTitle(searchQuery, 50);
+    }
+
+    /**
      * Search songs by title
      */
     public List<Song> searchByTitle(String searchQuery, int limit) throws SQLException {

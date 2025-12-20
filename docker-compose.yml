@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  # MySQL Database
+  mysql:
+    image: mysql:8.4
+    container_name: algorythm-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: algorythm_db
+      MYSQL_USER: algorythm_user
+      MYSQL_PASSWORD: algorythm_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./backend/Algorythm/src/main/resources/schema_mysql.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./backend/Algorythm/src/main/resources/sample_data.sql:/docker-entrypoint-initdb.d/02-data.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - algorythm-network
+
+  # Backend (Tomcat)
+  backend:
+    build:
+      context: ./backend/Algorythm
+      dockerfile: ../../Dockerfile.backend
+    container_name: algorythm-backend
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:mysql://mysql:3306/algorythm_db
+      DB_USERNAME: algorythm_user
+      DB_PASSWORD: algorythm_password
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - algorythm-network
+
+  # Frontend (Nginx)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ../Dockerfile.frontend
+    container_name: algorythm-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - algorythm-network
+
+networks:
+  algorythm-network:
+    driver: bridge
+
+volumes:
+  mysql-data:
